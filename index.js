@@ -6,7 +6,7 @@ const dns = require('dns');
 const mongoose = require('mongoose');
 const { Schema } = require('mongoose');
 require('dotenv').config();
-const PORT = 3000; 
+const PORT = process.env.PORT || 3000; 
 
 // Serving static files 
 app.use('/public', express.static(__dirname + '/public'))
